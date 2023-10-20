@@ -14,9 +14,8 @@ function App() {
     setCity(cityName)
   } 
 
-
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey} &q=${city}&aqi=no`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}%20&q=${city}&days=1&aqi=no&alerts=no`)
     .then(response => response.json())
     .then((data) => {
       console.log(data)

@@ -12,12 +12,25 @@ const WeatherContainer = ({weather, selectCity}) => {
         cityTemperature = weather.current.temp_c  
     }
 
+    let cityTemperatureHourly = ""
+    if (weather && 
+        weather.forecast && 
+        weather.forecast.forecastday &&
+        weather.forecast.forecastday[0] &&
+        weather.forecast.forecastday[0].hour) {
+        cityTemperatureHourly = weather.forecast.forecastday[0].hour.map((hour) => (
+            <p>Time: {hour.time.substring(11,16)} Temperature: {hour.temp_c}</p>)
+        )
+    }
+
 
     return (  
         <>
             <WeatherForm selectCity={selectCity}/>
             <p>City: {cityName}</p>
-            <p>Temperature: {cityTemperature} celcius</p>
+            <p>Current temperature: {cityTemperature} celcius</p>
+            <div>Temperature per hour:          
+            {cityTemperatureHourly}</div>
         </>
     );
 }
