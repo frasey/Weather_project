@@ -8,7 +8,7 @@ function App() {
 
   const [city, setCity] = useState('Edinburgh')
   const [weather, setWeather] = useState([])
-  const [days, setDays] = useState(7)
+  const [days, setDays] = useState(3)
 
 
   const selectCity = (cityName) => {

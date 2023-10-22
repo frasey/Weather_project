@@ -8,7 +8,7 @@ const WeatherContainer = ({weather, selectCity}) => {
         weather.location.localtime) {
         localTime = weather.location.localtime   
     }
-    
+
     let localTimeEpoch = ""
     if (weather && 
         weather.location && 
@@ -30,15 +30,31 @@ const WeatherContainer = ({weather, selectCity}) => {
         cityTemperature = weather.current.temp_c  
     }
 
-    let cityTemperatureHourly = ""
+    let cityTemperatureHourlyToday = ""
+    let cityTemperatureDaily = []
     if (weather && 
         weather.forecast && 
         weather.forecast.forecastday &&
         weather.forecast.forecastday[0] &&
         weather.forecast.forecastday[0].hour) {
-        cityTemperatureHourly = weather.forecast.forecastday[0].hour.map((hour) => (
-            <p /* key={weather.location.tz_id} */>Time: {hour.time.substring(11,16)} Temperature: {hour.temp_c}</p>)
-        )
+        cityTemperatureHourlyToday = weather.forecast.forecastday[0].hour.map((hour) => (
+            <p key={hour.time_epoch}>
+                Time: {hour.time} Temperature: {hour.temp_c}
+            </p>
+        ))
+        cityTemperatureDaily = weather.forecast.forecastday.map((day) => (
+            <div key={day.date}>
+                {day.hour
+                    .filter((time) => time.time_epoch >= localTimeEpoch - 3600)
+                    .map((time) => (
+                    <p key={time.time_epoch}>
+                        Time epoch: {time.time_epoch} <br/>
+                        Date&Time: {time.time} <br/>
+                        Temp: {time.temp_c} 
+                    </p>
+                ))}
+            </div>
+        ));
     }
 
 
@@ -47,10 +63,10 @@ const WeatherContainer = ({weather, selectCity}) => {
             <WeatherForm selectCity={selectCity}/>
             <p>City: {cityName}</p>
             <p>Local time: {localTime}</p>
-            <p>Local time in seconds: {localTimeEpoch}</p>
+            <p>Current time epoch: {localTimeEpoch}</p>
             <p>Current temperature: {cityTemperature} celcius</p>
-            <div>Temperature per hour:          
-            {cityTemperatureHourly}</div>
+            {/* <div>Temperature per hour:           {cityTemperatureHourlyToday}</div> */}
+            <div>{cityTemperatureDaily}</div>
         </>
     );
 }
