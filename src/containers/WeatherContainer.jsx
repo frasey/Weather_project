@@ -1,6 +1,6 @@
 import WeatherForm from "../components/WeatherForm";
 
-const WeatherContainer = ({weather, selectCity}) => {
+const WeatherContainer = ({weather, selectCity, selectDays}) => {
 
     let localTime = ""
     if (weather && 
@@ -46,13 +46,27 @@ const WeatherContainer = ({weather, selectCity}) => {
             <div key={day.date}>
                 {day.hour
                     .filter((time) => time.time_epoch >= localTimeEpoch - 3600)
-                    .map((time) => (
-                    <p key={time.time_epoch}>
-                        Time epoch: {time.time_epoch} <br/>
-                        Date&Time: {time.time} <br/>
-                        Temp: {time.temp_c} 
-                    </p>
-                ))}
+                    .map((time) => {
+                        const dateTime = new Date(time.time);
+
+                        const formattedDate = dateTime.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+                        const formattedTime = dateTime.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: true })
+                        
+                        const dateFirstLetterUpperCase = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)
+
+                        return (
+                        <p key={time.time_epoch}>
+                            {/* Time epoch: {time.time_epoch} <br/>
+                            Date & Time: {time.time} <br/>
+                            Temp: {time.temp_c}  */}
+                            Day: {dateFirstLetterUpperCase} <br/>
+                            Time: {formattedTime} <br/>
+                            Temp: {time.temp_c} °C
+                        </p>
+                        )
+                    })
+                }  
             </div>
         ));
     }
@@ -60,10 +74,10 @@ const WeatherContainer = ({weather, selectCity}) => {
 
     return (  
         <>
-            <WeatherForm selectCity={selectCity}/>
+            <WeatherForm selectCity={selectCity} selectDays={selectDays}/>
             <p>City: {cityName}</p>
             <p>Local time: {localTime}</p>
-            <p>Current time epoch: {localTimeEpoch}</p>
+            {/* <p>Current time epoch: {localTimeEpoch}</p> */}
             <p>Current temperature: {cityTemperature} celcius</p>
             {/* <div>Temperature per hour:           {cityTemperatureHourlyToday}</div> */}
             <div>{cityTemperatureDaily}</div>
