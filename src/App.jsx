@@ -8,6 +8,7 @@ function App() {
 
   const [city, setCity] = useState('Edinburgh')
   const [weather, setWeather] = useState([])
+  const [days, setDays] = useState(7)
 
 
   const selectCity = (cityName) => {
@@ -15,7 +16,7 @@ function App() {
   } 
 
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}%20&q=${city}&days=1&aqi=no&alerts=no`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}%20&q=${city}&days=${days}&aqi=no&alerts=no`)
     .then(response => response.json())
     .then((data) => {
       console.log(data)
