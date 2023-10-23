@@ -9,7 +9,7 @@ const DailyDisplay = ({time}) => {
     const dateFirstLetterUpperCase = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)
     
     return ( 
-        <div key={time.time_epoch}>
+        <div> 
             Day: {dateFirstLetterUpperCase} <br/>
             Time: {formattedTime} <br/>
             Temp: {time.temp_c} °C

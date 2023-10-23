@@ -19,7 +19,7 @@ const ForecastDisplay = ({weather}) => {
                 .map((time) => {
 
                     return (
-                        <DailyDisplay time={time}/>
+                        <DailyDisplay key={time.time_epoch} time={time}/>
                     )
                 })
             }  
