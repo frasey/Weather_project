@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import SearchBar from "./SearchBar"
 
 const WeatherForm = ({selectCity, selectDays}) => {
     
@@ -12,10 +13,6 @@ const WeatherForm = ({selectCity, selectDays}) => {
         selectDays(Number(days))
         setCityName('')
         setDays(0)
-    }
-
-    const handleInputChange = (event) => {
-        setCityName(event.target.value)
     }
 
     const handleSelectDaysChange = (event) => {
@@ -32,7 +29,7 @@ const WeatherForm = ({selectCity, selectDays}) => {
     return (  
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="City name" value={cityName} onChange={handleInputChange} required/>
+                <SearchBar cityName={cityName} setCityName={setCityName}/>
                 <select value={days} onChange={handleSelectDaysChange}>
                     <option value={''}>Select days</option>
                     {dayOptions.map((option) => (
