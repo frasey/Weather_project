@@ -32,7 +32,7 @@ const WeatherForm = ({selectCity, selectDays}) => {
     return (  
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="City name" value={cityName} onChange={handleInputChange}/>
+                <input type="text" placeholder="City name" value={cityName} onChange={handleInputChange} required/>
                 <select value={days} onChange={handleSelectDaysChange}>
                     <option value={''}>Select days</option>
                     {dayOptions.map((option) => (

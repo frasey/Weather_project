@@ -7,7 +7,7 @@ function App() {
   const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
 
   const [city, setCity] = useState('Edinburgh')
-  const [weather, setWeather] = useState([])
+  const [weather, setWeather] = useState({})
   const [days, setDays] = useState(1)
 
 
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <WeatherContainer weather={weather} selectCity={selectCity} selectDays={selectDays}/>
+      {weather.location ? <WeatherContainer weather={weather} selectCity={selectCity} selectDays={selectDays}/> : null}
     </>
   )
 }
