@@ -1,4 +1,4 @@
-import DailyDisplay from "./DailyDisplay"
+import DayAccordion from "./DayAccordion"
 
 const ForecastDisplay = ({weather}) => {
 
@@ -13,28 +13,18 @@ const ForecastDisplay = ({weather}) => {
     let cityTemperatureDaily = []
 
     cityTemperatureDaily = weather.forecast.forecastday.map((day) => {
-        const dailyDate = new Date(day.date)
-        const formattedDailyDate = dailyDate.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
-        const dateFirstLetterUpperCase = formattedDailyDate.charAt(0).toUpperCase() + formattedDailyDate.slice(1)
         return (
             <div key={day.date}>
-                <p>{dateFirstLetterUpperCase}</p>
-                {day.hour
-                .filter((time) => time.time_epoch >= localTimeEpoch - 3600)
-                .map((time) => {
-                    return (
-                        <DailyDisplay key={time.time_epoch} time={time}/>
-                    )
-                })
-            }
+            <DayAccordion day={day} localTimeEpoch={localTimeEpoch}/>
             </div>
         )
     })
-        return (  
+
+    return (  
         <>
-            <p>City: {cityName}</p>
-            <p>Local time: {localTime}</p>
-            <p>Current temperature: {cityTemperature} celcius</p>
+            <h1>City: {cityName}</h1>
+            <h2>Local time: {localTime}</h2>
+            <h3>Current temperature: {cityTemperature} celcius</h3>
             <div>{cityTemperatureDaily}</div>
         </>
     );
