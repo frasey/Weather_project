@@ -1,4 +1,4 @@
-const DailyDisplay = ({time}) => {
+const HourlyDisplay = ({time}) => {
 
     const dateTime = new Date(time.time)
 
@@ -16,4 +16,4 @@ const DailyDisplay = ({time}) => {
         </div>
     )
 }
-export default DailyDisplay;
+export default HourlyDisplay;
