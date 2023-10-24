@@ -81,7 +81,6 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 <h3>Current temperature: {cityTemperature} °C</h3>
             </CityInfo>
             <DisplayDayCards>{cityTemperatureDaily}</DisplayDayCards>
-            
         </>
     );
 }
