@@ -25,7 +25,12 @@ function App() {
     .then((data) => {
       console.log(data)
       setWeather(data)
-    })  
+    })
+    // .catch((err) => {
+    //   console.error(`error ${err}`)
+    //   response.status(404)
+    //   response.json({status : 404, error : err})
+    //   })
   }, [apiKey, city, days])
 
   return (
