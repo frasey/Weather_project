@@ -32,7 +32,12 @@ function App() {
       })
       data.forecast.forecastday = mappedForecastDays
       setWeather(data)
-    })  
+    })
+    // .catch((err) => {
+    //   console.error(`error ${err}`)
+    //   response.status(404)
+    //   response.json({status : 404, error : err})
+    //   })
   }, [apiKey, city, days])
 
   const accordionDisplayToggle = (dayToToggle) => {
