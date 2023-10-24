@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import HourlyDisplay from './HourlyDisplay';
+import DailyRecommendation from './DailyRecommendation';
 
 const DayAccordion = ({day, localTimeEpoch}) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -16,6 +17,7 @@ const DayAccordion = ({day, localTimeEpoch}) => {
         <div className="accordion">
             <div className="accordion-header" onClick={toggleAccordion}>
                 <h4>{dateFirstLetterUpperCase}</h4>
+                <DailyRecommendation day={day}/>
             </div>
             {isOpen && (
             <div className="accordion-content">
