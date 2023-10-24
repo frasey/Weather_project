@@ -10,6 +10,11 @@ const Map = styled.div`
 
 const CityInfo = styled.div`
     text-align: left;
+    padding: 20px 0;
+`
+const DisplayDayCards = styled.div`
+    display: flex;
+    gap: 10px;
 `
 
 const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
@@ -71,8 +76,9 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 <h2>Local time: {localTime}</h2>
                 {/* <img src ={weather.current.condition.icon}/> */}
                 <h3>Current temperature: {cityTemperature} °C</h3>
-                <div>{cityTemperatureDaily}</div>
             </CityInfo>
+            <DisplayDayCards>{cityTemperatureDaily}</DisplayDayCards>
+            
         </>
     );
 }

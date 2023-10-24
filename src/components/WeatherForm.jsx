@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 const CitySearch = styled.div`
     text-align: center;
+    padding-top: 30px;
 `
 
 const WeatherForm = ({selectCity, selectDays}) => {
