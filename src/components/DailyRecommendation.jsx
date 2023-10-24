@@ -1,5 +1,5 @@
 
-const dailyRecommendation = ({day}) => {
+const DailyRecommendation = ({day}) => {
 
     let rainyIcon = []
 
@@ -44,4 +44,4 @@ const dailyRecommendation = ({day}) => {
     </>)
 }
  
-export default dailyRecommendation;
+export default DailyRecommendation;
