@@ -34,7 +34,8 @@ const ForecastDisplay = ({weather}) => {
         <>
             <p>City: {cityName}</p>
             <p>Local time: {localTime}</p>
-            <p>Current temperature: {cityTemperature} celcius</p>
+            {/* <img src ={weather.current.condition.icon}/> */}
+            <p>Current temperature: {cityTemperature} °C</p>
             <div>{cityTemperatureDaily}</div>
         </>
     );
