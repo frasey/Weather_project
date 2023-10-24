@@ -16,9 +16,12 @@ const DayDisplay = ({day, localTimeEpoch, accordionDisplayToggle}) => {
         })
 
     return (
+        <>
+
         <Accordion key={day.date} accordionDisplayToggle={accordionDisplayToggle}
         title={dateFirstLetterUpperCase} content={dayContent} day={day}
         />
+        </>
     )
 }
 export default DayDisplay;

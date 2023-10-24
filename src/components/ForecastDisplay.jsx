@@ -54,6 +54,15 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                     text: '°C',
                 },
             },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f} °C'
+                    }
+                }
+            },
             series: [
                 {
                     name: '°C',
