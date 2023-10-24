@@ -9,11 +9,12 @@ const Map = styled.div`
 `
 
 const CityInfo = styled.div`
-    text-align: left;
+    text-align: center;
     padding: 20px 0;
 `
 const DisplayDayCards = styled.div`
     display: flex;
+    justify-content: center;
     gap: 10px;
 `
 

@@ -6,6 +6,7 @@ import styled from 'styled-components'
 const Title = styled.h1`
         text-align: center;
         padding: 10px;
+        font-size: 70px;
     `
 
 const Tagline = styled.p`
