@@ -26,7 +26,7 @@ function App() {
       console.log(data)
       setWeather(data)
     })  
-  }, [apiKey, city])
+  }, [apiKey, city, days])
 
   return (
     <>
