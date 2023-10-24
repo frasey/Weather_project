@@ -22,7 +22,7 @@ const DailyRecommendation = ({day}) => {
     const couldSnow = () => {
         if (day.day.daily_chance_of_snow >= 70) {
             snowyIcon = "🐧"
-        }
+        }   
     }
 
     const clothesRecommendation = () => {
