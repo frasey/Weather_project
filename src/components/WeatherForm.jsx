@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import SearchBar from "./SearchBar"
+import DayAccordion from "./DayDisplay"
 
 const WeatherForm = ({selectCity, selectDays}) => {
     
     const [cityName, setCityName] = useState('')
     const [days, setDays] = useState(0)
-
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -13,6 +13,7 @@ const WeatherForm = ({selectCity, selectDays}) => {
         selectDays(Number(days))
         setCityName('')
         setDays(0)
+        // accordion toggle in here!
     }
 
     const handleSelectDaysChange = (event) => {

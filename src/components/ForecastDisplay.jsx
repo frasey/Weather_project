@@ -1,6 +1,6 @@
-import DayAccordion from "./DayAccordion"
+import DayDisplay from "./DayDisplay"
 
-const ForecastDisplay = ({weather}) => {
+const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
 
     let localTime = weather.location.localtime   
 
@@ -15,7 +15,7 @@ const ForecastDisplay = ({weather}) => {
     cityTemperatureDaily = weather.forecast.forecastday.map((day) => {
         return (
             <div key={day.date}>
-            <DayAccordion day={day} localTimeEpoch={localTimeEpoch}/>
+            <DayDisplay day={day} localTimeEpoch={localTimeEpoch} accordionDisplayToggle={accordionDisplayToggle} />
             </div>
         )
     })
