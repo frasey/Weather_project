@@ -1,6 +1,11 @@
 import React, { useState } from "react"
 import SearchBar from "./SearchBar"
 import DayAccordion from "./DayDisplay"
+import styled from 'styled-components'
+
+const CitySearch = styled.div`
+    text-align: center;
+`
 
 const WeatherForm = ({selectCity, selectDays}) => {
     
@@ -28,7 +33,7 @@ const WeatherForm = ({selectCity, selectDays}) => {
     console.log("days available", dayOptions)
 
     return (  
-        <>
+        <CitySearch>
             <form onSubmit={handleSubmit}>
                 <SearchBar cityName={cityName} setCityName={setCityName}/>
                 <select value={days} onChange={handleSelectDaysChange}>
@@ -41,7 +46,7 @@ const WeatherForm = ({selectCity, selectDays}) => {
                 </select>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </CitySearch>
     );
 }
 
