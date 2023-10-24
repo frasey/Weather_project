@@ -5,7 +5,8 @@ const HourlyDisplay = ({time}) => {
     const formattedTime = dateTime.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', hour12: true })
 
     return ( 
-        <div> 
+        <div>
+            <img src ={time.condition.icon} alt="current weather icon"/><br/> 
             Time: {formattedTime} <br/>
             Temp: {time.temp_c} °C <br/>
             Wind Speed: {time.wind_mph} mph<br/>
