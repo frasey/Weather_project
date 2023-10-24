@@ -18,6 +18,10 @@ const KeyText = styled.p`
     color: #2f3e46;
 `
 
+const Key = styled.div`
+    padding: 25px;
+`
+
 const KeyDisplay = () => {
 
     const [showDetails, setShowDetails] = useState(false)
@@ -30,14 +34,14 @@ const KeyDisplay = () => {
         <>
             <Button onClick={toggleKey}>Key</Button>
             {showDetails && (
-                <div>
+                <Key>
                     <KeyText>☂️ Don't leave without your umbrella.</KeyText>
                     <KeyText>🐧 Snow predicted! </KeyText>
                     <KeyText>🧣 It's going to be cold, wrap up warm. </KeyText>
                     <KeyText>🧥 It's chilly, wear a coat. </KeyText>
                     <KeyText>🦺 You'll need a light jacket today </KeyText>
                     <KeyText>👕 It's sunny, pack your sunglasses! </KeyText>
-                </div>
+                </Key>
             )}
         </>
 );
