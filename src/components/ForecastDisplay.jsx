@@ -1,4 +1,5 @@
 import DayDisplay from "./DayDisplay"
+import KeyDisplay from "./KeyDisplay";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet' // leaflet imports
 import '../App.css';
 import React, { useState, useEffect } from "react"
@@ -7,7 +8,6 @@ import styled from 'styled-components'
 const Map = styled.div`
     padding: 30px;
 `
-
 const CityInfo = styled.div`
     text-align: center;
     padding: 20px 0;
@@ -58,6 +58,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
 
     return (  
         <>
+            <KeyDisplay />
             <Map>
                 <MapContainer id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
                 <ChangeMapView center={[latPosition, lonPosition]} />
@@ -79,7 +80,6 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 <h3>Current temperature: {cityTemperature} °C</h3>
             </CityInfo>
             <DisplayDayCards>{cityTemperatureDaily}</DisplayDayCards>
-            
         </>
     );
 }
