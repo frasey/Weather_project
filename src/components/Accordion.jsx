@@ -25,6 +25,7 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
                 </div>
                 {day.accordionDisplay && (
                 <div className="accordion-content">
+                <p>I am a future hourly temp graph c: </p>
                     {content}
                 </div>
                 )}
