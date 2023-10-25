@@ -99,8 +99,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
     
 
     return (  
-        <>
-            <KeyDisplay />
+        <>   
             <Map>
                 <MapContainer id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
                 <ChangeMapView center={[latPosition, lonPosition]} />
@@ -115,6 +114,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                     </Marker>
                 </MapContainer>
             </Map>
+            <KeyDisplay/>
             <CityInfo>
                 <h1>{cityName}</h1>
                 <h2>Local time: {localTime}</h2>
