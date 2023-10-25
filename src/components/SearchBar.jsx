@@ -17,7 +17,8 @@ const SearchBar = ({cityName, setCityName}) => {
 
     return ( 
         <>
-        <SearchField className="search-field" type="text" placeholder="City name" value={cityName} onChange={handleInputChange} required/>
+        {/* took out required */}
+        <SearchField className="search-field" type="text" placeholder="City name" onChange={handleInputChange} value={cityName}/>
         </>
     )
 }
