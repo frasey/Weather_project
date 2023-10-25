@@ -4,6 +4,10 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet' /
 import '../App.css';
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
+import { render } from 'react-dom' // high chart libr
+import Highcharts from 'highcharts' // high chart libr
+import HighchartsReact from 'highcharts-react-official' // high chart libr
+
 
 const Map = styled.div`
     padding: 30px;
@@ -21,17 +25,14 @@ const DisplayDayCards = styled.div`
 const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
 
     let localTime = weather.location.localtime   
-
     let localTimeEpoch = weather.location.localtime_epoch   
-
     let cityName = weather.location.name  
-
     let cityTemperature = weather.current.temp_c  
-
     let cityTemperatureDaily = []
 
     const [latPosition, setLatPosition] = useState(0)
     const [lonPosition, setLonPosition] = useState(0)
+    const [chartData, setChartData] = useState([]);
 
     const ChangeMapView = ({ center }) => {
         const map = useMap();
@@ -40,13 +41,51 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
     };
 
     useEffect(() => {
-        if (weather) {
             setLatPosition(weather.location.lat)
             setLonPosition(weather.location.lon)
-        }
+            const data = weather.forecast.forecastday.map((day) => {
+                return {
+                    date: day.date,
+                    avgtemp_c: day.day.avgtemp_c,
+                };
+            });
+            setChartData(data);
     }, [weather])
 
-
+    const options = {
+            chart: {
+                type: 'column',
+            },
+            title: {
+                text: `Weekly average temperature in ${cityName} [°C]`,
+            },
+            xAxis: {
+                categories: chartData.map((data) => data.date),
+                title: {
+                    text: `DATE DD-MM-YYYY`
+                }
+            },
+            yAxis: {
+                title: {
+                    text: '°C',
+                },
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f} °C'
+                    }
+                }
+            },
+            series: [
+                {
+                    name: '°C',
+                    data: chartData.map((data) => data.avgtemp_c),
+                },
+            ],
+    };
 
     cityTemperatureDaily = weather.forecast.forecastday.map((day) => {
         return (
@@ -55,9 +94,15 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
             </div>
         )
     })
+    
+
+
 
     return (  
         <>
+            <div>
+                <HighchartsReact highcharts={Highcharts} options={options} />
+            </div>
             <KeyDisplay />
             <Map>
                 <MapContainer id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
