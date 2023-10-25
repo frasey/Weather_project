@@ -97,7 +97,6 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
             </div>
         )
     })
-    
 
     return (  
         <>
