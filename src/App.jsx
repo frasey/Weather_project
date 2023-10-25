@@ -47,10 +47,10 @@ function App() {
         const copyOfDay = {...day}
         copyOfDay.accordionDisplay = !copyOfDay.accordionDisplay
         return copyOfDay
-      } else if (day.accordionDisplay === true) {
-        const copyOfDay = {...day}
-        copyOfDay.accordionDisplay = false
-        return copyOfDay
+      // } else if (day.accordionDisplay === true) {
+      //   const copyOfDay = {...day}
+      //   copyOfDay.accordionDisplay = false
+      //   return copyOfDay
       } else {
         return day
       }
