@@ -39,15 +39,23 @@ const Submit = styled.button`
 const WeatherForm = ({selectCity, selectDays}) => {
     
     const [cityName, setCityName] = useState('')
+    const [prevCity, setPrevCity] = useState('')
     const [days, setDays] = useState(0)
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        selectCity(cityName)
+
+        if (cityName) {
+            selectCity(cityName)
+            setPrevCity(cityName)
+        } else if (prevCity !== '') {
+            selectCity(prevCity)
+        } else {
+            selectCity("Edinburgh")
+        }
         selectDays(Number(days))
         setCityName('')
         setDays(0)
-        // accordion toggle in here!
     }
 
     const handleSelectDaysChange = (event) => {
