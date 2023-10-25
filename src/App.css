@@ -19,11 +19,15 @@ a {
     background-color: transparent;
 }
 
-.leaflet-control-zoom {
-    background-color: black;
+.leaflet-marker-shadow {
+    background-color: transparent;
 }
 
-.leaflet-marker-shadow {
+.leaflet-control-zoom {
+    background-color: #dddddd;
+}
+
+.leaflet-top {
     background-color: transparent;
 }
 
