@@ -6,9 +6,35 @@
     color: #F5F5F5;
 }
 
+span {
+    background-color: #f5f5f5;
+    color: #84a98c;
+}
+
+a {
+    background-color: #dddddd;
+}
+
+.leaflet-control-zoom {
+    background-color: #f5f5f5;
+}
+
+.leaflet-bar {
+    background-color: #f5f5f5;
+}
+
+.leaflet-control {
+    background-color: #f5f5f5;
+}
+
+.leaflet-marker-icon {
+    background-color: transparent;
+}
+
 #map { 
     margin: auto;
     height: 40vh;
     width: 80vh;
     border-radius: 40px;
+    background-color: #ddd;
 }
