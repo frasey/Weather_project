@@ -2,7 +2,7 @@ import {useState} from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-    width: 60px;
+    width: 80px;
     height: 40px;
     border: 3px;
     border-color: #2f3e46;
@@ -20,6 +20,12 @@ const KeyText = styled.p`
 
 const Key = styled.div`
     padding: 25px;
+    position: absolute;
+    background-color: #354f52;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    top: 700px; 
+    left: 60px;
 `
 
 const KeyDisplay = () => {
