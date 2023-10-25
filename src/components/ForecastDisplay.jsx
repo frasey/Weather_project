@@ -100,8 +100,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
     })
 
     return (  
-        <>
-            <KeyDisplay />
+        <>   
             <Map>
                 <MapContainer  id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
                 <ChangeMapView center={[latPosition, lonPosition]} />
@@ -117,6 +116,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                     <Marker position={[-20, 60]}><Popup></Popup></Marker><Marker position={[-20, 65]}><Popup></Popup></Marker><Marker position={[-20, 70]}><Popup></Popup></Marker><Marker position={[-20, 75]}><Popup></Popup></Marker><Marker position={[-20, 80]}><Popup></Popup></Marker><Marker position={[-20, 55]}><Popup></Popup></Marker><Marker position={[-25, 55]}><Popup></Popup></Marker><Marker position={[-30, 55]}><Popup></Popup></Marker><Marker position={[-35, 55]}><Popup></Popup></Marker><Marker position={[-40, 55]}><Popup></Popup></Marker><Marker position={[-40, 60]}><Popup></Popup></Marker><Marker position={[-40, 65]}><Popup></Popup></Marker><Marker position={[-40, 70]}><Popup></Popup></Marker><Marker position={[-40, 75]}><Popup></Popup></Marker><Marker position={[-40, 80]}><Popup></Popup></Marker><Marker position={[-40, 55]}><Popup></Popup></Marker><Marker position={[-45, 80]}><Popup></Popup></Marker><Marker position={[-50, 80]}><Popup></Popup></Marker><Marker position={[-55, 80]}><Popup></Popup></Marker><Marker position={[-60, 80]}><Popup></Popup></Marker><Marker position={[-60, 60]}><Popup></Popup></Marker><Marker position={[-60, 65]}><Popup></Popup></Marker><Marker position={[-60, 70]}><Popup></Popup></Marker><Marker position={[-60, 75]}><Popup></Popup></Marker><Marker position={[-60, 80]}><Popup></Popup></Marker><Marker position={[-60, 55]}><Popup></Popup></Marker><Marker position={[-45, 67]}><Popup></Popup></Marker><Marker position={[-50, 67]}><Popup></Popup></Marker><Marker position={[-55, 67]}><Popup></Popup></Marker><Marker position={[-60, 67]}><Popup></Popup></Marker><Marker position={[-65, 67]}><Popup></Popup></Marker><Marker position={[-68, 67]}><Popup></Popup></Marker><Marker position={[-30, 67]}><Popup></Popup></Marker><Marker position={[-35, 67]}><Popup></Popup></Marker><Marker position={[-40, 67]}><Popup></Popup></Marker><Marker position={[-25, 67]}><Popup></Popup></Marker><Marker position={[-20, 67]}><Popup></Popup></Marker><Marker position={[-15, 67]}><Popup></Popup></Marker><Marker position={[-10, 67]}><Popup></Popup></Marker>
                 </MapContainer>
             </Map>
+            <KeyDisplay/>
             <CityInfo>
                 <h1>{cityName}</h1>
                 <h2>Local time: {localTime}</h2>
