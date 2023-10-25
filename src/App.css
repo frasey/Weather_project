@@ -16,7 +16,15 @@ a {
 }
 
 .leaflet-marker-icon {
-    background-color: #dddddd;
+    background-color: transparent;
+}
+
+.leaflet-control-zoom {
+    background-color: black;
+}
+
+.leaflet-marker-shadow {
+    background-color: transparent;
 }
 
 #map { 
@@ -24,5 +32,4 @@ a {
     height: 40vh;
     width: 80vh;
     border-radius: 40px;
-    background-color: #ddd;
 }
