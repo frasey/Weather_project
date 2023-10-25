@@ -62,7 +62,6 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
             },
         ],
     };
-    
 
 
     return (
@@ -70,7 +69,8 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
             <div className="accordion">
                 <div className="accordion-header" onClick={toggleAccordion}>
                     <Card>
-                        <h4>{title}</h4>
+                        <h4>{title.split(" ")[0].substring(0, 3)}, {title.split(" ")[1].substring(0, 2)} {title.split(" ")[2].substring(0, 1).toUpperCase()}{title.split(" ")[2].substring(1, 3)} </h4>
+                        {/* <p>{title.split(" ")}</p> */}
                         <DailyRecommendation day={day} />
                     </Card>
                 </div>
