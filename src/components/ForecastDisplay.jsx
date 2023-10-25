@@ -50,6 +50,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 };
             });
             setChartData(data);
+            console.log("This is the chart's data:", data)
     }, [weather])
 
     const options = {
@@ -57,12 +58,12 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 type: 'column',
             },
             title: {
-                text: `Weekly average temperature in ${cityName} [°C]`,
+                text: `Daily average temperature in ${cityName} [°C]`,
             },
             xAxis: {
                 categories: chartData.map((data) => data.date),
                 title: {
-                    text: `DATE DD-MM-YYYY`
+                    text: `Date`
                 }
             },
             yAxis: {
