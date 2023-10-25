@@ -1,6 +1,7 @@
 import DayDisplay from "./DayDisplay"
 import KeyDisplay from "./KeyDisplay";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet' // leaflet imports
+import 'leaflet/dist/leaflet.css'; 
 import '../App.css';
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components'
@@ -102,9 +103,9 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
         <>
             <KeyDisplay />
             <Map>
-                <MapContainer id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
+                <MapContainer  id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
                 <ChangeMapView center={[latPosition, lonPosition]} />
-                    <TileLayer
+                    <TileLayer className="tilelayer"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />

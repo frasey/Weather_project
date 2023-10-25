@@ -59,6 +59,8 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
             {
                 name: '°C',
                 data: chartData.map((data) => data.temp),
+                color: '#354f52',
+                backgroundColor: '#F5F5F5'
             },
         ],
     };
