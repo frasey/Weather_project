@@ -15,20 +15,8 @@ a {
     background-color: #dddddd;
 }
 
-.leaflet-control-zoom {
-    background-color: #f5f5f5;
-}
-
-.leaflet-bar {
-    background-color: #f5f5f5;
-}
-
-.leaflet-control {
-    background-color: #f5f5f5;
-}
-
 .leaflet-marker-icon {
-    background-color: transparent;
+    background-color: #dddddd;
 }
 
 #map { 

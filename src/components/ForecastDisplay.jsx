@@ -106,7 +106,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
             <Map>
                 <MapContainer  id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
                 <ChangeMapView center={[latPosition, lonPosition]} />
-                    <TileLayer
+                    <TileLayer className="tilelayer"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
