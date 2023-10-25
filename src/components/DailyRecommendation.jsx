@@ -1,3 +1,9 @@
+import styled from 'styled-components'
+
+const IconDisplay = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+`
 
 const DailyRecommendation = ({day}) => {
 
@@ -16,7 +22,7 @@ const DailyRecommendation = ({day}) => {
     const couldSnow = () => {
         if (day.day.daily_chance_of_snow >= 70) {
             snowyIcon = "🐧"
-        }
+        }   
     }
 
     const clothesRecommendation = () => {
@@ -36,12 +42,14 @@ const DailyRecommendation = ({day}) => {
     couldRain()
     couldSnow()
     clothesRecommendation()
-       
-    return (<>
-        <p>{rainyIcon}</p>
-        <p>{snowyIcon}</p>
-        <p>{tempIcon}</p>
-    </>)
+
+    return (
+        <IconDisplay>
+            <p>{rainyIcon}</p>
+            <p>{snowyIcon}</p>
+            <p>{tempIcon}</p>
+        </IconDisplay>
+    )
 }
- 
+
 export default DailyRecommendation;

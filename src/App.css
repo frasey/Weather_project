@@ -1,4 +1,14 @@
+* {
+    margin: 0 3px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #84a98c;
+    color: #F5F5F5;
+}
+
 #map { 
+    margin: auto;
     height: 40vh;
-    width: 80vh 
+    width: 80vh;
+    border-radius: 40px;
 }

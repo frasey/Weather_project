@@ -1,3 +1,10 @@
+import styled from 'styled-components'
+
+const SearchField = styled.input`
+    background-color: #f5f5f5;
+    color: #2f3e46;
+`
+
 const SearchBar = ({cityName, setCityName}) => {
     
     const handleInputChange = (event) => {
@@ -6,7 +13,7 @@ const SearchBar = ({cityName, setCityName}) => {
 
     return ( 
         <>
-        <input type="text" placeholder="City name" value={cityName} onChange={handleInputChange} required/>
+        <SearchField className="search-field" type="text" placeholder="City name" value={cityName} onChange={handleInputChange} required/>
         </>
     )
 }

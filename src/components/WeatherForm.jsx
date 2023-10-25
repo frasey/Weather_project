@@ -1,6 +1,24 @@
 import React, { useState } from "react"
 import SearchBar from "./SearchBar"
 import DayAccordion from "./DayDisplay"
+import styled from 'styled-components'
+
+const CitySearch = styled.div`
+    text-align: center;
+    padding-top: 30px;
+`
+const DropDown = styled.select`
+    background-color: #f5f5f5;
+    color: #2f3e46;
+`
+
+const Submit = styled.button`
+    background-color: #f5f5f5;
+    color: #2f3e46;
+    box-shadow: 2px 2px #cad2c5;
+    border-radius: 5px;
+    padding: 0 5px;
+`
 
 const WeatherForm = ({selectCity, selectDays}) => {
     
@@ -28,20 +46,20 @@ const WeatherForm = ({selectCity, selectDays}) => {
     console.log("days available", dayOptions)
 
     return (  
-        <>
+        <CitySearch>
             <form onSubmit={handleSubmit}>
                 <SearchBar cityName={cityName} setCityName={setCityName}/>
-                <select value={days} onChange={handleSelectDaysChange}>
+                <DropDown value={days} onChange={handleSelectDaysChange}>
                     <option value={''}>Select days</option>
                     {dayOptions.map((option) => (
                         <option key={option} value={option}>
                             {option}
                         </option>
                     ))}
-                </select>
-                <button type="submit">Submit</button>
+                </DropDown>
+                <Submit type="submit">Submit</Submit>
             </form>
-        </>
+        </CitySearch>
     );
 }
 
