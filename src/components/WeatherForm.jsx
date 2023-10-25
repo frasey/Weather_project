@@ -8,20 +8,32 @@ const CitySearch = styled.div`
     padding-top: 30px;
 `
 const DropDown = styled.select`
+    height: 40px;
+    font-weight: bold;
     background-color: #f5f5f5;
     color: #2f3e46;
 `
 
 const Submit = styled.button`
-    background-color: #f5f5f5;
+    width: 80px;
+    height: 40px;
+    border: 3px;
+    border-color: #2f3e46;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #52796f;
     color: #2f3e46;
-    box-shadow: 2px 2px #cad2c5;
-    /* background-color: #52796f;
-    color: #2f3e46;
-    box-shadow: 2px 2px #354f52; */
+    box-shadow: 4px 4px #354f52;
     font-weight: bold;
-    border-radius: 5px;
-    padding: 0 5px;
+    padding: 0 10px;
+    &:hover,
+    &:focus {
+        color: #f5f5f5;
+    }
+    &:active {
+        color: #354f52;
+    }
+    
 `
 
 const WeatherForm = ({selectCity, selectDays}) => {

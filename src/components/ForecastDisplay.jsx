@@ -76,13 +76,15 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                     dataLabels: {
                         enabled: true,
                         format: '{point.y:.1f} °C'
-                    }
+                    },
                 }
             },
             series: [
                 {
                     name: '°C',
                     data: chartData.map((data) => data.avgtemp_c),
+                    color: '#354f52',
+                    backgroundColor: '#F5F5F5'
                 },
             ],
     };
@@ -96,13 +98,8 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
     })
     
 
-
-
     return (  
         <>
-            <div>
-                <HighchartsReact highcharts={Highcharts} options={options} />
-            </div>
             <KeyDisplay />
             <Map>
                 <MapContainer id="map" center={[latPosition, lonPosition]} zoom={10} scrollWheelZoom={false}>
@@ -125,6 +122,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
                 <h3>Current temperature: {cityTemperature} °C</h3>
             </CityInfo>
             <DisplayDayCards>{cityTemperatureDaily}</DisplayDayCards>
+            <HighchartsReact highcharts={Highcharts} options={options} />
         </>
     );
 }
