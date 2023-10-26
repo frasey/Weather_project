@@ -2,6 +2,8 @@ import {useState} from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
+    // position: sticky;
+    // left: 13%;
     width: 80px;
     height: 40px;
     border: 3px;
@@ -27,12 +29,14 @@ const KeyText = styled.p`
 
 const Key = styled.div`
     padding: 10px;
-    position: absolute;
+    position: sticky;
     border: 1px solid #2f3e46;
     border-radius: 10px;
     box-shadow: 4px 4px #354f52;
-    top: 555px; 
-    left: 95px;
+    width: 705px;
+    height: 40px;
+    // top: 5%; 
+    left: 26%;
 `
 
 const KeyDisplay = () => {
@@ -45,10 +49,14 @@ const KeyDisplay = () => {
 
     return ( 
         <>
-            <Button onClick={toggleKey}>Key</Button>
+            <Button onClick={toggleKey}>KEY</Button>
             {showDetails && (
                 <Key>
-                    <KeyText>☂️ Don't leave without your umbrella. 🐧 Snow predicted! 🧣 It's going to be cold, wrap up warm. 🧥 It's chilly, wear a coat. 🦺 You'll need a light jacket today 👕 It's sunny, pack your sunglasses!</KeyText>
+                    <KeyText>
+                        ☂️ Don't leave without your umbrella.  🐧 Snow predicted!  🧣 It's going to be cold, wrap up warm. </KeyText>
+                    <KeyText>
+                        🧥 It's chilly, wear a coat.  🦺 You'll need a light jacket today  👕 It's sunny, pack your sunglasses!
+                    </KeyText>
                 </Key>
             )}
         </>
