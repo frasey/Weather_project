@@ -2,8 +2,8 @@ import {useState} from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-    // position: sticky;
-    // left: 13%;
+    position: sticky;
+    left: 13%;
     width: 80px;
     height: 40px;
     border: 3px;
@@ -35,7 +35,7 @@ const Key = styled.div`
     box-shadow: 4px 4px #354f52;
     width: 705px;
     height: 40px;
-    // top: 5%; 
+    top: 5%; 
     left: 26%;
 `
 
