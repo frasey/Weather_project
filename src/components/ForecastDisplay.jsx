@@ -11,7 +11,7 @@ import HighchartsReact from 'highcharts-react-official' // high chart libr
 
 
 const Map = styled.div`
-    padding: 30px;
+    padding: 40px;
 `
 const CityInfo = styled.div`
     text-align: center;
@@ -30,6 +30,7 @@ const DisplayDayCards = styled.div`
         padding: 0;
     }
 `
+
 const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
 
     let localTime = weather.location.localtime   
@@ -77,6 +78,7 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
             yAxis: {
                 title: {
                     text: '°C',
+                    rotation: 0,  // rotates y-axis unit
                 },
             },
             plotOptions: {
@@ -126,9 +128,9 @@ const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
             <KeyDisplay/>
             <CityInfo>
                 <h1>{cityName}</h1>
-                <h2>Local time: {localTime}</h2>
-                {/* <img src ={weather.current.condition.icon}/> */}
-                <h3>Current temperature: {cityTemperature} °C</h3>
+                <h2>Local Time: {localTime}</h2>
+                <img src ={weather.current.condition.icon}/>
+                <h3>Current Temperature: {cityTemperature} °C</h3>
             </CityInfo>
             <DisplayDayCards>{cityTemperatureDaily}</DisplayDayCards>
             <HighchartsReact highcharts={Highcharts} options={options} />

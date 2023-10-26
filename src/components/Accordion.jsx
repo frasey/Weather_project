@@ -5,23 +5,26 @@ import { render } from 'react-dom' // high chart libr
 import Highcharts from 'highcharts' // high chart libr
 import HighchartsReact from 'highcharts-react-official' // high chart libr
 
-// const Container = styled.div`
-//     display: grid;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     gap: 10px;
-// `
+const Container = styled.div`
+    // display: grid;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // grid-template-columns: repeat(5, 1fr);
+    // gap: 10px;
+`
 
 const Card = styled.div`
-    // flex-wrap: wrap;
-    // flex: 0 0 calc(20% - 10px);
+    flex-wrap: wrap;
+    // flex: 0 0 calc(33% - 10px);
     // width: 230px;
-    // height: 70px;
+    height: 70px;
     border: 3px;
     border-color: #354f52;
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
+    text-align: center;
+    font-size: 25px;  
 `
 
 const Accordion = ({title, content, accordionDisplayToggle, day}) => {
@@ -79,7 +82,7 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
 
     return (
         <>
-        {/* <Container> */}
+        <Container>
             <div className="accordion">
                 <div className="accordion-header" onClick={toggleAccordion}>
                     <Card>
@@ -97,7 +100,7 @@ const Accordion = ({title, content, accordionDisplayToggle, day}) => {
                 </div>
                 )}
             </div>
-        {/* </Container> */}
+        </Container>
         </>
     )
 }
