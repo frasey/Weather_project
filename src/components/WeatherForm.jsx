@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import SearchBar from "./SearchBar"
-import DayAccordion from "./DayDisplay"
 import styled from 'styled-components'
 
 const CitySearch = styled.div`
