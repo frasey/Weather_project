@@ -18,9 +18,17 @@ const CityInfo = styled.div`
     padding: 20px 0;
 `
 const DisplayDayCards = styled.div`
-    gap: 30px 1px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 1px;
+    justify-content: space-evenly;
+
+    & > * {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
 `
 
 const ForecastDisplay = ({weather, accordionDisplayToggle}) => {
