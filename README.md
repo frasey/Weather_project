@@ -10,6 +10,7 @@ API key
 ## API key
 Get an API key from https://www.weatherapi.com. 
 Add a .env file in the root folder with the following line:
+
 'VITE_REACT_APP_API_KEY=< your_key >'
 ​
 ## Starting    
