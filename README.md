@@ -3,8 +3,8 @@ This was a group project. We created an app where you can input a city or town a
 
 ## Prerequisites 
 ```
-Node 
-MongoDB
+Node
+API key
 ```
 ​
 ## API key
