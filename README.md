@@ -13,32 +13,34 @@ Although I have done a lot of paired programming, this was my first group projec
 
 ## Project screenshots
 <figure>
-  <img width="300" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988">
+  <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988">
+  <br>
   <figcaption>Homepage</figcaption>
 </figure>
 
 <figure>
-  <img width="300" alt="Key" src="https://github.com/frasey/Weather_project/assets/129194569/d257ebb6-27ea-49a1-b761-57ce08a4e314">
+  <img width="340" alt="Key" src="https://github.com/frasey/Weather_project/assets/129194569/d257ebb6-27ea-49a1-b761-57ce08a4e314">
+  <br>
   <figcaption>Key</figcaption>
 </figure>
 
 <figure>
-  <img width="300" alt="Select city" src="https://github.com/frasey/Weather_project/assets/129194569/d1615f50-8332-4bf0-8ec6-2d6578dfba29">
+  <img width="340" alt="Select city" src="https://github.com/frasey/Weather_project/assets/129194569/d1615f50-8332-4bf0-8ec6-2d6578dfba29">
   <figcaption>Select city</figcaption>
 </figure>
 
 <figure>
-  <img width="300" title="Search result" alt="Search result" src="https://github.com/frasey/Weather_project/assets/129194569/ac039fca-e8c2-4b8f-a13b-1fbe30c61e42">
+  <img width="340" title="Search result" alt="Search result" src="https://github.com/frasey/Weather_project/assets/129194569/ac039fca-e8c2-4b8f-a13b-1fbe30c61e42">
   <figcaption>Search result</figcaption>
 </figure>
 
 <figure>
-  <img width="300" title="One day view" alt="One day view" src="https://github.com/frasey/Weather_project/assets/129194569/3234159e-00a1-4bcb-87a8-3c76017f986d">
+  <img width="340" title="One day view" alt="One day view" src="https://github.com/frasey/Weather_project/assets/129194569/3234159e-00a1-4bcb-87a8-3c76017f986d">
   <figcaption>One day view</figcaption>
 </figure>
 
 <figure>
-  <img width="1440" title=" Multiple day view" alt="Multiple day view" src="https://github.com/frasey/Weather_project/assets/129194569/37206696-9499-4c9b-9b78-4e6c617e6df1">
+  <img width="340" title=" Multiple day view" alt="Multiple day view" src="https://github.com/frasey/Weather_project/assets/129194569/37206696-9499-4c9b-9b78-4e6c617e6df1">
   <figcaption>Multiple day view</figcaption>
 </figure>
 
