@@ -11,41 +11,16 @@ Although I have done a lot of paired programming, this was my first group projec
 - The key for the project was altered to stick when open at the end of the project, so when the page scrolls down the key scrolls too. However, it scrolls behind or on top of some elements and I would like to fix this.
 - I very recently found a bug relating to the number of days rendering and I intend to work on a fix for this in the coming weeks.
 
+
 ## Project screenshots
  
 |          |           |           |
 | -------- | --------- | --------- |
-| <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988"> | <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988"> | <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988"> |
-| Homepage | Homepage | Homepage |
-<figure>
-  <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988">
-  <figcaption>Homepage</figcaption>
-</figure>
+| <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988"> | <img width="340" alt="Key" src="https://github.com/frasey/Weather_project/assets/129194569/d257ebb6-27ea-49a1-b761-57ce08a4e314"> | <img width="340" alt="Select city" src="https://github.com/frasey/Weather_project/assets/129194569/d1615f50-8332-4bf0-8ec6-2d6578dfba29"> |
+| Homepage | Key | Select city |
+| <img width="340" title="Search result" alt="Search result" src="https://github.com/frasey/Weather_project/assets/129194569/ac039fca-e8c2-4b8f-a13b-1fbe30c61e42"> | <img width="340" title="One day view" alt="One day view" src="https://github.com/frasey/Weather_project/assets/129194569/3234159e-00a1-4bcb-87a8-3c76017f986d"> | <img width="340" title=" Multiple day view" alt="Multiple day view" src="https://github.com/frasey/Weather_project/assets/129194569/37206696-9499-4c9b-9b78-4e6c617e6df1"> |
+| Search result | One day view | Multiple day view |
 
-<figure>
-  <img width="340" alt="Key" src="https://github.com/frasey/Weather_project/assets/129194569/d257ebb6-27ea-49a1-b761-57ce08a4e314">
-  <figcaption>Key</figcaption>
-</figure>
-
-<figure>
-  <img width="340" alt="Select city" src="https://github.com/frasey/Weather_project/assets/129194569/d1615f50-8332-4bf0-8ec6-2d6578dfba29">
-  <figcaption>Select city</figcaption>
-</figure>
-
-<figure>
-  <img width="340" title="Search result" alt="Search result" src="https://github.com/frasey/Weather_project/assets/129194569/ac039fca-e8c2-4b8f-a13b-1fbe30c61e42">
-  <figcaption>Search result</figcaption>
-</figure>
-
-<figure>
-  <img width="340" title="One day view" alt="One day view" src="https://github.com/frasey/Weather_project/assets/129194569/3234159e-00a1-4bcb-87a8-3c76017f986d">
-  <figcaption>One day view</figcaption>
-</figure>
-
-<figure>
-  <img width="340" title=" Multiple day view" alt="Multiple day view" src="https://github.com/frasey/Weather_project/assets/129194569/37206696-9499-4c9b-9b78-4e6c617e6df1">
-  <figcaption>Multiple day view</figcaption>
-</figure>
 
 ## Prerequisites 
 ```
