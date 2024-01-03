@@ -10,6 +10,8 @@ I was really happy with how we managed our first time working on one repo, and h
 
 ## What would I do differently or like to keep working on
 - I think that the aesthetic of the page is really nice and stands out for a weather app, but in retrospect having a green colour scheme is not the most accessible. With more time, I would like to review the colour scheme to keep a similar feel but ensure accessibility for all users.
+- I would have broken the CSS styled components into their own file instead of having each in the component file itself. I would like go back over the project and restructure this, as well as breaking some components out into their own component files.
+- I would like to complete another short project in leaflet and highcharts.
 - The key for the project was altered to stick when open at the end of the project, so when the page scrolls down the key scrolls too. However, it scrolls behind or on top of some elements and I would like to fix this.
 - I very recently found a bug relating to the number of days rendering and I intend to work on a fix for this in the coming weeks.
 
