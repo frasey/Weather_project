@@ -3,7 +3,9 @@ This was a group project. We created an app where you can input a city or town a
 
 
 ## The Project
-Although I have done a lot of paired programming, this was my first group project. I was really happy with how we managed our first time working on one repo, and how we were able to divide the project into areas that could be worked on solely or paired. We would come together as a full group for our merges at the end of each day, and think this really helped us understand how to work better with GitHub. I'm happy with the overall look of the website - although it can be hard to find places where it's snowing to see our little penguin.
+Although I have done a lot of paired programming, this was my first group project. We used Miro to draw up wire frames and Trello to track our priorities and workflow.
+
+I was really happy with how we managed our first time working on one repo, and how we were able to divide the project into areas that could be worked on solely or paired. We would come together as a full group for our merges at the end of each day, and think this really helped us understand how to work better with GitHub. I'm happy with the overall look of the website - although it can be hard to find places where it's snowing to see our little penguin.
 
 
 ## What would I do differently or like to keep working on
