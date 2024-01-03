@@ -12,15 +12,14 @@ Although I have done a lot of paired programming, this was my first group projec
 - I very recently found a bug relating to the number of days rendering and I intend to work on a fix for this in the coming weeks.
 
 ## Project screenshots
+
 <figure>
   <img width="340" alt="Homepage" src="https://github.com/frasey/Weather_project/assets/129194569/47840f3f-386d-4b41-a8c8-b0351e358988">
-  <br>
   <figcaption>Homepage</figcaption>
 </figure>
 
 <figure>
   <img width="340" alt="Key" src="https://github.com/frasey/Weather_project/assets/129194569/d257ebb6-27ea-49a1-b761-57ce08a4e314">
-  <br>
   <figcaption>Key</figcaption>
 </figure>
 
